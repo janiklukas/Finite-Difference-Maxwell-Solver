@@ -8,7 +8,7 @@ We use the Lorenz gauge and Gaussian units with $c=1$. The governing equations f
 $$(\partial_t^2-\nabla^2)\phi=4\pi\rho\quad\text{and}\quad(\partial_t^2-\nabla^2)\textbf{A}=4\pi\,\textbf{j}.$$
 
 We divide the domain into $N^3$ equal cubic cells so that the Laplacian can be approximated as
-$$(\nabla^2f)_{i,j,k}\approx f_{i+1,j,k}+f_{i-1,j,k}+f_{i,j+1,k}+f_{i,j-1,k}+f_{i,j,k+1}+f_{i,j,k-1}-6f_{i,j,k}.$$
+$$(\nabla^2f)_ {i,j,k}\approx f_{i+1,j,k}+f_{i-1,j,k}+f_{i,j+1,k}+f_{i,j-1,k}+f_{i,j,k+1}+f_{i,j,k-1}-6f_{i,j,k}.$$
 
 ## Initial Field State
 
@@ -20,7 +20,7 @@ After discretization these can be recast into a $4N^3\times 4N^3$ linear system 
 ## Time Evolution
 
 A central difference method is used for the time derivatives:
-$$\partial_t^2f(t)\approx\frac{1}{\Delta t^2}\big[f(t+\Delta t)-2f(t)+f(t-\Delta t)\big], $$
+$$\partial_t^2f(t)\approx\frac{1}{\Delta t^2}\big[f(t+\Delta t)-2f(t) + f(t-\Delta t)\big], $$
 so two previous states are required at each time step.
 
 This results in the following simple algorithm:
