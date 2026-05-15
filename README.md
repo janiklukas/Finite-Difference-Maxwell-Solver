@@ -24,12 +24,12 @@ After discretization these can be recast into a $4N^3\times 4N^3$ linear system 
 
 A central difference method is used for the time derivatives:
 
-$$\partial_t^2f(t)\approx\frac{1}{\Delta t^2}\big[f(t+\Delta t)-2f(t) + f(t-\Delta t)\big], $$
+$$\partial_t^2f(t)\approx\frac{1}{\Delta t^2}[f(t+\Delta t)-2f(t) + f(t-\Delta t)], $$
 
 so two previous states are required at each time step.
 
 This results in the following simple algorithm:
 
-$$x^{(n+1)}=2x^{(n)}-x^{(n-1)}+\Delta t^2\big[Ax^{(n)}+b^{(n)}\big]$$
+$$x^{(n+1)}=2x^{(n)}-x^{(n-1)}+\Delta t^2[Ax^{(n)}+b^{(n)}]$$
 
 where $A$ is the same matrix as in the previous section.
